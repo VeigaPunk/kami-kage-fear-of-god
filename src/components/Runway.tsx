@@ -14,10 +14,9 @@ export function Runway() {
             </h2>
             <Ornament className="mt-6 max-w-[7rem]" />
             <p className="mt-6 max-w-md font-body text-sm leading-relaxed text-fg-muted text-pretty">
-              Concrete, glass, and silence. The collection debuted in a gallery
-              setting — monochrome tailoring, the Kami Kage high-cut, and the
-              slow walk that defines Fear of God presence over Three Stripes
-              inheritance.
+              Concrete, glass, and silence. The collection debuted in a gallery setting — monochrome
+              tailoring, the Kami Kage high-cut, and the slow walk that defines Fear of God presence
+              over Three Stripes inheritance.
             </p>
           </div>
           <div className="lg:col-span-6 lg:col-start-7">

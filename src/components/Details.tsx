@@ -4,7 +4,11 @@ const rows = [
   { label: "Model", leather: "Kami Kage Leather", knit: "Kami Kage Knit" },
   { label: "Upper", leather: "Full-grain optic white leather", knit: "Engineered monochrome knit" },
   { label: "Brand mark", leather: "Three Stripes emboss + 三 seal", knit: "Three Stripes knit-in" },
-  { label: "Closure", leather: "Cross wrap strap with emboss", knit: "Cross wrap strap with emboss" },
+  {
+    label: "Closure",
+    leather: "Cross wrap strap with emboss",
+    knit: "Cross wrap strap with emboss",
+  },
   { label: "Midsole", leather: "Unit sole + translucent air", knit: "Unit sole + translucent air" },
   { label: "Edition", leather: "三三三 · Zhu Rong sealed", knit: "Open release" },
   { label: "Companion", leather: "White leather randoseru", knit: "—" },
@@ -19,13 +23,11 @@ export function Details() {
           <p className="font-body text-[10px] font-medium uppercase tracking-label text-fg-subtle">
             05 — Specifications
           </p>
-          <h2 className="mt-4 font-display text-4xl tracking-display sm:text-5xl">
-            Side by side
-          </h2>
+          <h2 className="mt-4 font-display text-4xl tracking-display sm:text-5xl">Side by side</h2>
           <Ornament className="mt-6 max-w-[7rem]" />
           <p className="mt-6 font-body text-sm leading-relaxed text-fg-muted text-pretty">
-            Same bones, different skins — both carry the Three Stripes. The
-            leather path is exclusive under Zhu Rong; the knit path is continuous.
+            Same bones, different skins — both carry the Three Stripes. The leather path is
+            exclusive under Zhu Rong; the knit path is continuous.
           </p>
         </div>
 
@@ -33,13 +35,22 @@ export function Details() {
           <table className="w-full min-w-[640px] border-collapse text-left">
             <thead>
               <tr className="border-b border-border">
-                <th className="pb-5 pr-4 font-body text-[9px] font-medium uppercase tracking-label text-fg-subtle">
+                <th
+                  scope="col"
+                  className="pb-5 pr-4 font-body text-[9px] font-medium uppercase tracking-label text-fg-subtle"
+                >
                   Spec
                 </th>
-                <th className="pb-5 pr-4 font-body text-[9px] font-medium uppercase tracking-label text-fg-subtle">
+                <th
+                  scope="col"
+                  className="pb-5 pr-4 font-body text-[9px] font-medium uppercase tracking-label text-fg-subtle"
+                >
                   Leather · 三三三
                 </th>
-                <th className="pb-5 font-body text-[9px] font-medium uppercase tracking-label text-fg-subtle">
+                <th
+                  scope="col"
+                  className="pb-5 font-body text-[9px] font-medium uppercase tracking-label text-fg-subtle"
+                >
                   Knit
                 </th>
               </tr>
@@ -51,8 +62,14 @@ export function Details() {
                     {row.label}
                   </td>
                   <td className="py-6 pr-4 align-top font-display text-lg tracking-display text-fg sm:text-xl">
-                    {row.leather.includes("三") || row.leather.includes("Zhu") || row.leather.includes("Three") ? (
-                      <span className={row.leather.includes("三") ? "font-cjk text-[1.05em]" : undefined}>
+                    {row.leather.includes("三") ||
+                    row.leather.includes("Zhu") ||
+                    row.leather.includes("Three") ? (
+                      <span
+                        className={
+                          row.leather.includes("三") ? "font-cjk text-[1.05em]" : undefined
+                        }
+                      >
                         {row.leather}
                       </span>
                     ) : (
@@ -94,9 +111,7 @@ export function Details() {
                   {card.mark}
                 </span>
               )}
-              <h3 className="mt-5 font-display text-2xl tracking-display">
-                {card.title}
-              </h3>
+              <h3 className="mt-5 font-display text-2xl tracking-display">{card.title}</h3>
               <p className="mt-3 font-body text-sm leading-relaxed text-fg-muted text-pretty">
                 {card.body}
               </p>

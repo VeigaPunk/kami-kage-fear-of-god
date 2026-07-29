@@ -17,7 +17,7 @@ function Home() {
   return (
     <div className="min-h-dvh">
       <SiteNav />
-      <main>
+      <main id="main">
         <Hero />
         <Story />
         <ZhuRong />

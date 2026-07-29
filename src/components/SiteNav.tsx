@@ -45,11 +45,7 @@ export function SiteNav() {
     >
       <div className="mx-auto flex h-[4.25rem] max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
         <a href="#top" className="flex items-center gap-3">
-          <ThreeStripes
-            tone={light ? "light" : "dark"}
-            size="sm"
-            orientation="diagonal"
-          />
+          <ThreeStripes tone={light ? "light" : "dark"} size="sm" orientation="diagonal" />
           <span className="hidden h-4 w-px bg-current opacity-20 sm:block" />
           <span className="flex flex-col leading-none">
             <span
@@ -79,9 +75,7 @@ export function SiteNav() {
                   ? "font-cjk text-[13px] tracking-wide-cjk"
                   : "uppercase tracking-label"
               } ${
-                light
-                  ? "text-fg-muted hover:text-fg"
-                  : "text-fg-inverse/60 hover:text-fg-inverse"
+                light ? "text-fg-muted hover:text-fg" : "text-fg-inverse/60 hover:text-fg-inverse"
               }`}
             >
               {link.label}
@@ -96,18 +90,13 @@ export function SiteNav() {
               light ? "bg-fg text-fg-inverse" : "bg-fg-inverse text-fg"
             }`}
           >
-            <ThreeStripes
-              tone={light ? "dark" : "light"}
-              size="sm"
-            />
+            <ThreeStripes tone={light ? "dark" : "light"} size="sm" />
             Explore Set
           </a>
           <button
             type="button"
             className={`inline-flex h-11 w-11 items-center justify-center lg:hidden ${
-              light
-                ? "border border-border text-fg"
-                : "border border-fg-inverse/25 text-fg-inverse"
+              light ? "border border-border text-fg" : "border border-fg-inverse/25 text-fg-inverse"
             }`}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}

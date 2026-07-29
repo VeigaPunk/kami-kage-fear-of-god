@@ -19,25 +19,21 @@ export function Story() {
 
           <div className="space-y-7 lg:col-span-7 lg:col-start-6">
             <p className="font-display text-[1.65rem] leading-[1.3] tracking-display text-pretty italic text-fg sm:text-3xl">
-              adidas built a language of three — three stripes of motion,
-              identity, and craft. Fear of God answers with volume and silence.
-              Kami Kage is where they meet.
+              adidas built a language of three — three stripes of motion, identity, and craft. Fear
+              of God answers with volume and silence. Kami Kage is where they meet.
             </p>
             <p className="max-w-2xl font-body text-[0.95rem] leading-relaxed text-fg-muted text-pretty">
-              Presented in the spirit of the legendary Prada × Superstar
-              collaboration: optic white, exacting leather, dual heritage marks,
-              and a limited duo that elevates footwear into an object of
-              collection. Two expressions — knit for the everyday rite,
-              full-grain leather for the archive — share the same silent
-              architecture, and the same three-stripe inheritance.
+              Presented in the spirit of the legendary Prada × Superstar collaboration: optic white,
+              exacting leather, dual heritage marks, and a limited duo that elevates footwear into
+              an object of collection. Two expressions — knit for the everyday rite, full-grain
+              leather for the archive — share the same silent architecture, and the same
+              three-stripe inheritance.
             </p>
             <p className="max-w-2xl font-body text-[0.95rem] leading-relaxed text-fg-muted text-pretty">
-              The leather Kami Kage is issued under the{" "}
-              <span className="text-fg">Zhu Rong</span> code —{" "}
-              <span className="font-cjk text-fg">三三三</span> units — three
-              threes for the Three Stripes. Each pair is accompanied by a
-              randoseru cut from the same white hide. A complete ritual of
-              carry and step.
+              The leather Kami Kage is issued under the <span className="text-fg">Zhu Rong</span>{" "}
+              code — <span className="font-cjk text-fg">三三三</span> units — three threes for the
+              Three Stripes. Each pair is accompanied by a randoseru cut from the same white hide. A
+              complete ritual of carry and step.
             </p>
 
             <dl className="mt-12 grid gap-8 border-t border-border pt-10 sm:grid-cols-3">
@@ -57,9 +53,7 @@ export function Story() {
                   {item.v === "stripes" ? (
                     <dd className="mt-3 flex items-center gap-3">
                       <ThreeStripes size="md" orientation="diagonal" />
-                      <span className="font-display text-lg tracking-display">
-                        {item.label}
-                      </span>
+                      <span className="font-display text-lg tracking-display">{item.label}</span>
                     </dd>
                   ) : (
                     <dd

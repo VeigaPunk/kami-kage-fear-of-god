@@ -1,0 +1,7 @@
+routeTree.gen.ts
+.vercel/
+dist/
+.output/
+node_modules/
+package-lock.json
+verifier/runs/

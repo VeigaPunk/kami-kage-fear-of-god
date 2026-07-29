@@ -7,6 +7,7 @@ export function LimitedSet() {
   const [serial, setSerial] = useState(1);
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const id = window.setInterval(() => {
       setSerial((n) => (n >= TOTAL ? 1 : n + 1));
     }, 120);
@@ -43,10 +44,9 @@ export function LimitedSet() {
             <Ornament tone="dark" className="mt-7 max-w-[7rem]" />
 
             <p className="mt-7 max-w-md font-body text-sm leading-relaxed text-fg-inverse/65 text-pretty sm:text-[0.95rem]">
-              Three hundred thirty-three — three threes for adidas’s Three
-              Stripes. In the tradition of Prada × Superstar limited duos: a
-              shoe and a bag, twinned in material. Each Kami Kage Leather is
-              hand-numbered under the Zhu Rong seal and sold exclusively with a
+              Three hundred thirty-three — three threes for adidas’s Three Stripes. In the tradition
+              of Prada × Superstar limited duos: a shoe and a bag, twinned in material. Each Kami
+              Kage Leather is hand-numbered under the Zhu Rong seal and sold exclusively with a
               white leather randoseru cut from the same hide.
             </p>
 
@@ -57,13 +57,15 @@ export function LimitedSet() {
                   <p className="font-body text-[9px] uppercase tracking-label text-fg-inverse/40">
                     Serial plaque
                   </p>
-                  <p className="mt-4 font-mono text-4xl tabular-nums tracking-tight text-fg-inverse sm:text-5xl">
+                  <p
+                    className="mt-4 font-mono text-4xl tabular-nums tracking-tight text-fg-inverse sm:text-5xl"
+                    aria-hidden="true"
+                  >
                     <span className="text-fg-inverse/30">#</span>
                     {display}
                   </p>
-                  <p className="mt-1 font-body text-[11px] text-fg-inverse/40">
-                    of {TOTAL}
-                  </p>
+                  <p className="sr-only">Each unit is hand-numbered from 001 to 333.</p>
+                  <p className="mt-1 font-body text-[11px] text-fg-inverse/40">of {TOTAL}</p>
                 </div>
                 <div className="flex flex-col items-center gap-3 border border-fg-inverse/20 px-4 py-3">
                   <ThreeStripes tone="dark" size="sm" orientation="diagonal" />
@@ -75,17 +77,14 @@ export function LimitedSet() {
                     三
                     <br />
                     三
-                    <br />
-                    三
+                    <br />三
                   </span>
                 </div>
               </div>
               <p className="mt-6 border-t border-fg-inverse/10 pt-5 font-body text-xs leading-relaxed text-fg-inverse/50">
-                Each unit carries a unique number from 001 to 333, embossed
-                beside the vertical{" "}
-                <span className="font-cjk text-fg-inverse/70">三三三</span>{" "}
-                seal — the Three Stripes rewritten as character — and mirrored
-                inside the randoseru lid.
+                Each unit carries a unique number from 001 to 333, embossed beside the vertical{" "}
+                <span className="font-cjk text-fg-inverse/70">三三三</span> seal — the Three Stripes
+                rewritten as character — and mirrored inside the randoseru lid.
               </p>
             </div>
 

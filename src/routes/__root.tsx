@@ -15,8 +15,32 @@ export const Route = createRootRoute({
         content:
           "Editorial exploration of the adidas Kami Kage × Fear of God collaboration — Zhu Rong coded leather set of 333 with matching randoseru.",
       },
+      { name: "theme-color", content: "#0a0a0a" },
+      { property: "og:type", content: "website" },
+      {
+        property: "og:title",
+        content: "adidas Kami Kage × Fear of God — 祝融 · 三三三",
+      },
+      {
+        property: "og:description",
+        content:
+          "Three stripes. Three threes. One quiet fire — the Zhu Rong coded leather set of 333 with matching randoseru.",
+      },
+      { property: "og:image", content: "/media/set-pairing.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:title",
+        content: "adidas Kami Kage × Fear of God — 祝融 · 三三三",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Three stripes. Three threes. One quiet fire — the Zhu Rong coded leather set of 333 with matching randoseru.",
+      },
+      { name: "twitter:image", content: "/media/set-pairing.jpg" },
     ],
     links: [
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       {
@@ -40,6 +64,12 @@ function RootDocument() {
         <HeadContent />
       </head>
       <body className="min-h-dvh bg-bg text-fg antialiased">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:bg-fg focus:px-4 focus:py-2 focus:font-body focus:text-xs focus:uppercase focus:tracking-label focus:text-fg-inverse"
+        >
+          Skip to content
+        </a>
         <AuthProvider>
           <Outlet />
         </AuthProvider>

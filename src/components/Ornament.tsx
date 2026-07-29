@@ -17,14 +17,11 @@ export function ThreeStripes({
   className?: string;
   size?: "sm" | "md" | "lg";
 }) {
-  const bar =
-    tone === "dark" ? "bg-fg-inverse/70" : "bg-fg";
+  const bar = tone === "dark" ? "bg-fg-inverse/70" : "bg-fg";
 
   const gap = size === "sm" ? "gap-[3px]" : size === "lg" ? "gap-1.5" : "gap-1";
-  const thick =
-    size === "sm" ? "h-[2px] w-5" : size === "lg" ? "h-[3px] w-10" : "h-[2.5px] w-7";
-  const thickV =
-    size === "sm" ? "w-[2px] h-5" : size === "lg" ? "w-[3px] h-10" : "w-[2.5px] h-7";
+  const thick = size === "sm" ? "h-[2px] w-5" : size === "lg" ? "h-[3px] w-10" : "h-[2.5px] w-7";
+  const thickV = size === "sm" ? "w-[2px] h-5" : size === "lg" ? "w-[3px] h-10" : "w-[2.5px] h-7";
 
   if (orientation === "vertical") {
     return (
@@ -73,10 +70,7 @@ export function Ornament({ tone = "light", className = "" }: OrnamentProps) {
   const line = tone === "dark" ? "bg-fg-inverse/20" : "bg-border-strong/50";
 
   return (
-    <div
-      className={`flex items-center gap-5 ${className}`}
-      aria-hidden="true"
-    >
+    <div className={`flex items-center gap-5 ${className}`} aria-hidden="true">
       <span className={`h-px flex-1 ${line}`} />
       <ThreeStripes tone={tone} size="sm" />
       <span className={`h-px flex-1 ${line}`} />

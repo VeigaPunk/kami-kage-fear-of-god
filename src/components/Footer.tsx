@@ -24,9 +24,7 @@ export function Footer() {
 
         <div className="mt-16 grid gap-10 border-t border-border pt-12 sm:grid-cols-3 lg:grid-cols-4">
           <div>
-            <p className="font-body text-[9px] uppercase tracking-label text-fg-subtle">
-              Navigate
-            </p>
+            <p className="font-body text-[9px] uppercase tracking-label text-fg-subtle">Navigate</p>
             <ul className="mt-4 space-y-2.5">
               {[
                 ["#story", "Story"],
@@ -50,9 +48,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="font-body text-[9px] uppercase tracking-label text-fg-subtle">
-              Editions
-            </p>
+            <p className="font-body text-[9px] uppercase tracking-label text-fg-subtle">Editions</p>
             <ul className="mt-4 space-y-2.5 font-body text-sm text-fg-muted">
               <li>Leather · 三三三</li>
               <li>Knit · Open</li>
@@ -60,9 +56,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="font-body text-[9px] uppercase tracking-label text-fg-subtle">
-              Codex
-            </p>
+            <p className="font-body text-[9px] uppercase tracking-label text-fg-subtle">Codex</p>
             <ul className="mt-4 space-y-2.5 font-body text-sm text-fg-muted">
               <li className="flex items-center gap-2">
                 <ThreeStripes size="sm" /> Three Stripes
@@ -76,12 +70,10 @@ export function Footer() {
             </ul>
           </div>
           <div className="sm:col-span-3 lg:col-span-1">
-            <p className="font-body text-[9px] uppercase tracking-label text-fg-subtle">
-              Note
-            </p>
+            <p className="font-body text-[9px] uppercase tracking-label text-fg-subtle">Note</p>
             <p className="mt-4 font-body text-sm leading-relaxed text-fg-muted text-pretty">
-              Conceptual editorial exploration inspired by luxury sport
-              collaborations. Not an official product page.
+              Conceptual editorial exploration inspired by luxury sport collaborations. Not an
+              official product page.
             </p>
           </div>
         </div>
@@ -91,8 +83,7 @@ export function Footer() {
             Special project · Editorial concept
           </p>
           <p className="font-body text-[10px] text-fg-subtle">
-            Three Stripes · #001—#333 ·{" "}
-            <span className="font-cjk tracking-wide-cjk">三三三</span>
+            Three Stripes · #001—#333 · <span className="font-cjk tracking-wide-cjk">三三三</span>
           </p>
         </div>
       </div>

@@ -36,14 +36,12 @@ export function ZhuRong() {
             Three is the seal.
           </h2>
           <p className="mt-6 max-w-xl font-body text-sm leading-relaxed text-fg-muted text-pretty sm:text-base">
-            adidas is the house of the{" "}
-            <span className="text-fg">Three Stripes</span> — three lines of
-            heritage, performance, and identity. Here that mark meets the kanji{" "}
+            adidas is the house of the <span className="text-fg">Three Stripes</span> — three lines
+            of heritage, performance, and identity. Here that mark meets the kanji{" "}
             <span className="font-cjk text-fg">三</span> and the fire of{" "}
-            <span className="italic text-fg">Zhu Rong</span> (祝融). The limited
-            leather set is coded{" "}
-            <span className="font-cjk text-fg">三三三</span> — three hundred
-            thirty-three units — three threes for the three stripes.
+            <span className="italic text-fg">Zhu Rong</span> (祝融). The limited leather set is
+            coded <span className="font-cjk text-fg">三三三</span> — three hundred thirty-three
+            units — three threes for the three stripes.
           </p>
         </div>
 
@@ -53,9 +51,7 @@ export function ZhuRong() {
         <div className="mx-auto mt-14 flex max-w-lg flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-10">
           <div className="flex flex-col items-center gap-3">
             <ThreeStripes size="lg" orientation="diagonal" />
-            <p className="font-body text-[9px] uppercase tracking-label text-fg-subtle">
-              adidas
-            </p>
+            <p className="font-body text-[9px] uppercase tracking-label text-fg-subtle">adidas</p>
           </div>
           <span className="font-display text-2xl text-fg-subtle/40">→</span>
           <div className="flex flex-col items-center gap-2">
@@ -86,10 +82,7 @@ export function ZhuRong() {
               {p.mark === "stripes" ? (
                 <ThreeStripes size="lg" orientation="diagonal" className="mb-1" />
               ) : (
-                <span
-                  className="font-cjk text-4xl leading-none text-fg sm:text-5xl"
-                  lang="zh"
-                >
+                <span className="font-cjk text-4xl leading-none text-fg sm:text-5xl" lang="zh">
                   {p.kanji}
                 </span>
               )}
@@ -107,7 +100,10 @@ export function ZhuRong() {
           <div className="flex flex-col justify-between gap-8 lg:col-span-4">
             <div>
               <ThreeStripes size="md" orientation="diagonal" />
-              <p className="mt-5 font-cjk text-4xl leading-none tracking-wide-cjk text-fg/20 sm:text-5xl" lang="zh">
+              <p
+                className="mt-5 font-cjk text-4xl leading-none tracking-wide-cjk text-fg/20 sm:text-5xl"
+                lang="zh"
+              >
                 三
               </p>
               <p className="mt-4 font-body text-[10px] uppercase tracking-label text-fg-subtle">
@@ -117,15 +113,14 @@ export function ZhuRong() {
           </div>
           <div className="space-y-5 lg:col-span-7 lg:col-start-6">
             <p className="font-display text-2xl leading-snug tracking-display italic text-pretty sm:text-3xl">
-              “Three stripes built the house. Three threes close the archive.
-              One fire keeps them white.”
+              “Three stripes built the house. Three threes close the archive. One fire keeps them
+              white.”
             </p>
             <p className="font-body text-sm leading-relaxed text-fg-muted text-pretty">
               On each leather tongue, the serial sits beside a vertical seal:{" "}
-              <span className="font-cjk text-fg">三三三</span> — the three
-              stripes rewritten as character. The same mark is foil-stamped
-              inside the randoseru lid. Collectors do not own “number 47”
-              alone — they own one of three-hundred-thirty-three vessels of the
+              <span className="font-cjk text-fg">三三三</span> — the three stripes rewritten as
+              character. The same mark is foil-stamped inside the randoseru lid. Collectors do not
+              own “number 47” alone — they own one of three-hundred-thirty-three vessels of the
               brand’s oldest number.
             </p>
             <a

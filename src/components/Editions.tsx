@@ -40,17 +40,14 @@ export function Editions() {
             <Ornament className="mt-6 max-w-[7rem]" />
           </div>
           <p className="max-w-xs font-body text-sm leading-relaxed text-fg-muted">
-            Leather for the archive. Knit for the street. Both carry the Three
-            Stripes inheritance — high collar, cross wrap, floating midsole.
+            Leather for the archive. Knit for the street. Both carry the Three Stripes inheritance —
+            high collar, cross wrap, floating midsole.
           </p>
         </div>
 
         <div className="mt-16 grid gap-6 lg:grid-cols-2 lg:gap-8">
           {editions.map((item) => (
-            <article
-              key={item.id}
-              className="group flex flex-col bg-bg-elevated shadow-border"
-            >
+            <article key={item.id} className="group flex flex-col bg-bg-elevated shadow-border">
               <div className="relative aspect-[5/4] overflow-hidden bg-bg-soft">
                 <img
                   src={item.image}
@@ -67,9 +64,7 @@ export function Editions() {
                 <p className="font-body text-[9px] uppercase tracking-label text-fg-subtle">
                   {item.label} · {item.material}
                 </p>
-                <h3 className="mt-3 font-display text-3xl tracking-display">
-                  {item.name}
-                </h3>
+                <h3 className="mt-3 font-display text-3xl tracking-display">{item.name}</h3>
                 <p className="mt-4 flex-1 font-body text-sm leading-relaxed text-fg-muted text-pretty">
                   {item.description}
                 </p>

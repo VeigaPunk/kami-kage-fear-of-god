@@ -11,7 +11,8 @@ export function Hero() {
           loop
           playsInline
           poster="/media/leather.png"
-          aria-label="Runway presentation of the Kami Kage collaboration"
+          aria-hidden="true"
+          tabIndex={-1}
         >
           <source src="/media/runway.mp4" type="video/mp4" />
         </video>
@@ -50,10 +51,9 @@ export function Hero() {
         <Ornament tone="dark" className="reveal reveal-delay-2 mt-8 max-w-xs" />
 
         <p className="reveal reveal-delay-2 mt-8 max-w-lg font-body text-sm leading-relaxed text-fg-inverse/65 sm:text-[0.95rem]">
-          The house of the Three Stripes meets Fear of God volume — optic white
-          leather and knit, sealed under Zhu Rong as a set of{" "}
-          <span className="font-cjk text-fg-inverse/90">三三三</span> with a
-          matching randoseru.
+          The house of the Three Stripes meets Fear of God volume — optic white leather and knit,
+          sealed under Zhu Rong as a set of{" "}
+          <span className="font-cjk text-fg-inverse/90">三三三</span> with a matching randoseru.
         </p>
 
         <div className="reveal reveal-delay-3 mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
