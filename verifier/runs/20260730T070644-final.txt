@@ -1,0 +1,20 @@
+== TYPECHECK ==
+> typecheck
+> tsc --noEmit
+
+EXIT:0
+== LINT ==
+> lint
+> eslint .
+
+EXIT:0
+== PRETTIER ==
+Checking formatting...
+All matched files use Prettier code style!
+EXIT:0
+== VIDEO BYTES ==
+3035482
+== BUILD ==
+EXIT:0
+
+[migrate] DATABASE_URL not set — skipping (the PGLite fallback migrates itself).
