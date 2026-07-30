@@ -40,3 +40,6 @@ Quality gates live in `verifier/` (acceptance criteria + timestamped run logs).
 | 祝融          | Zhu Rong — fire sovereign |
 
 Not an official adidas or Fear of God product page — editorial concept exploration.
+
+---
+_Last push: 2026-07-30 (trigger redeploy)_
