@@ -80,10 +80,17 @@ export function Editions() {
                   ))}
                 </ul>
                 <a
-                  href="#details"
+                  href={item.id === "leather" ? "#limited" : "#details"}
                   className="mt-9 inline-flex w-fit items-center gap-3 font-body text-[10px] font-medium uppercase tracking-label text-fg transition-opacity hover:opacity-50"
                 >
-                  Technical details
+                  {item.id === "leather" ? (
+                    <>
+                      <ThreeStripes size="sm" />
+                      Discover the set
+                    </>
+                  ) : (
+                    "Technical details"
+                  )}
                 </a>
               </div>
             </article>

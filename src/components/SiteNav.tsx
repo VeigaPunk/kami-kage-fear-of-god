@@ -6,6 +6,7 @@ const links = [
   { href: "#story", label: "Story" },
   { href: "#zhurong", label: "Three · 祝融" },
   { href: "#editions", label: "Editions" },
+  { href: "#limited", label: "三三三" },
   { href: "#runway", label: "Runway" },
   { href: "#details", label: "Details" },
 ];
@@ -84,13 +85,13 @@ export function SiteNav() {
 
         <div className="flex items-center gap-2">
           <a
-            href="#editions"
+            href="#limited"
             className={`hidden items-center gap-2.5 px-4 py-2.5 font-body text-[10px] font-medium uppercase tracking-label transition-opacity hover:opacity-75 sm:inline-flex ${
               light ? "bg-fg text-fg-inverse" : "bg-fg-inverse text-fg"
             }`}
           >
             <ThreeStripes tone={light ? "dark" : "light"} size="sm" />
-            View Editions
+            Explore Set
           </a>
           <button
             type="button"

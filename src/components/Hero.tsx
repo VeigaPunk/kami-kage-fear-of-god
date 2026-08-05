@@ -65,11 +65,11 @@ export function Hero() {
             View Editions
           </a>
           <a
-            href="#runway"
+            href="#limited"
             className="inline-flex h-12 items-center justify-center gap-3 border border-fg-inverse/30 px-8 font-body text-[10px] font-medium uppercase tracking-label text-fg-inverse transition-colors hover:border-fg-inverse/55 hover:bg-fg-inverse/5"
           >
             <ThreeStripes tone="dark" size="sm" />
-            Watch Runway
+            The Numbered Set
           </a>
         </div>
 
