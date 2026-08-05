@@ -124,12 +124,12 @@ export function ZhuRong() {
               brand’s oldest number.
             </p>
             <a
-              href="#limited"
+              href="#editions"
               className="inline-flex items-center gap-3 pt-2 font-body text-[11px] font-medium uppercase tracking-label text-fg transition-opacity hover:opacity-55"
             >
               <ThreeStripes size="sm" />
               <span className="h-px w-6 bg-fg" />
-              Enter the numbered set
+              View editions
             </a>
           </div>
         </div>

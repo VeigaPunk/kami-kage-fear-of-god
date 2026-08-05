@@ -27,7 +27,7 @@ export const Route = createRootRoute({
         content:
           "Three stripes. Three threes. One quiet fire — the Zhu Rong coded leather set of 333 with matching randoseru.",
       },
-      { property: "og:image", content: media("set-pairing.jpg") },
+      { property: "og:image", content: media("leather.jpg") },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
@@ -38,7 +38,7 @@ export const Route = createRootRoute({
         content:
           "Three stripes. Three threes. One quiet fire — the Zhu Rong coded leather set of 333 with matching randoseru.",
       },
-      { name: "twitter:image", content: media("set-pairing.jpg") },
+      { name: "twitter:image", content: media("leather.jpg") },
     ],
     links: [
       { rel: "icon", href: asset("favicon.svg"), type: "image/svg+xml" },

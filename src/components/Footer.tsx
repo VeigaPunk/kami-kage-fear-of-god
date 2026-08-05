@@ -30,7 +30,6 @@ export function Footer() {
                 ["#story", "Story"],
                 ["#zhurong", "Three · 祝融"],
                 ["#editions", "Editions"],
-                ["#limited", "三三三"],
                 ["#runway", "Runway"],
                 ["#details", "Details"],
               ].map(([href, label]) => (
