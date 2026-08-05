@@ -34,13 +34,12 @@ Live: https://kami-kage-fear-of-god.vercel.app/
 
 ## Deploy (GitHub Pages)
 
-Pushes to `main` run `.github/workflows/deploy-pages.yml`, which builds with
-`NITRO_PRESET=github_pages` and deploys to GitHub Pages.
+Pushes to `main` run `.github/workflows/deploy-pages.yml`, which SSR-snapshots
+the site into static files and publishes the `gh-pages` branch.
 
 - Site: https://veigapunk.github.io/kami-kage-fear-of-god/
+- Source branch: `gh-pages` (root)
 - Manual re-run: Actions → **Deploy to GitHub Pages** → **Run workflow**
-
-Repo Settings → Pages → Source must be **GitHub Actions** (created on first deploy).
 
 ## Concept
 
