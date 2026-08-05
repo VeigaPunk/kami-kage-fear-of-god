@@ -1,4 +1,6 @@
-# Deploy the editorial site to GitHub Pages (Nitro github_pages preset).
+# Deploy the editorial site to GitHub Pages.
+# Uses a custom static export (SSR once into index.html) because Nitro's
+# github_pages preset is incompatible with TanStack Start on this stack.
 name: Deploy to GitHub Pages
 
 on:
@@ -30,11 +32,8 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: Build (GitHub Pages)
-        run: npm run build
-        env:
-          NITRO_PRESET: github_pages
-          GITHUB_PAGES: "true"
+      - name: Build static Pages site
+        run: npm run build:pages
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

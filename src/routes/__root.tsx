@@ -1,7 +1,7 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import appCss from "../styles.css?url";
-import { media } from "@/lib/assets";
+import { asset, media } from "@/lib/assets";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -41,7 +41,7 @@ export const Route = createRootRoute({
       { name: "twitter:image", content: media("set-pairing.jpg") },
     ],
     links: [
-      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "icon", href: asset("favicon.svg"), type: "image/svg+xml" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       {
