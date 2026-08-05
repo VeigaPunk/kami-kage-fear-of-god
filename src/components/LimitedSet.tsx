@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Ornament, ThreeStripes } from "./Ornament";
+import { media } from "@/lib/assets";
 
 const TOTAL = 333;
 
@@ -111,7 +112,7 @@ export function LimitedSet() {
           <div className="grid gap-3 sm:grid-cols-2 lg:col-span-7">
             <figure className="overflow-hidden border border-fg-inverse/10 sm:col-span-2">
               <img
-                src="/media/set-pairing.jpg"
+                src={media("set-pairing.jpg")}
                 alt="Kami Kage leather boots paired with white leather randoseru backpack"
                 className="aspect-[16/10] w-full object-cover"
               />
@@ -124,7 +125,7 @@ export function LimitedSet() {
             </figure>
             <figure className="overflow-hidden border border-fg-inverse/10">
               <img
-                src="/media/leather.png"
+                src={media("leather.jpg")}
                 alt="Kami Kage full-grain leather high-top"
                 className="aspect-square w-full object-cover"
               />
@@ -134,7 +135,7 @@ export function LimitedSet() {
             </figure>
             <figure className="overflow-hidden border border-fg-inverse/10">
               <img
-                src="/media/randoseru.jpg"
+                src={media("randoseru.jpg")}
                 alt="White leather randoseru backpack"
                 className="aspect-square w-full object-cover"
               />

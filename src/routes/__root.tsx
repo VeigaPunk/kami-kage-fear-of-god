@@ -1,6 +1,7 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import appCss from "../styles.css?url";
+import { media } from "@/lib/assets";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -26,7 +27,7 @@ export const Route = createRootRoute({
         content:
           "Three stripes. Three threes. One quiet fire — the Zhu Rong coded leather set of 333 with matching randoseru.",
       },
-      { property: "og:image", content: "/media/set-pairing.jpg" },
+      { property: "og:image", content: media("set-pairing.jpg") },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
@@ -37,7 +38,7 @@ export const Route = createRootRoute({
         content:
           "Three stripes. Three threes. One quiet fire — the Zhu Rong coded leather set of 333 with matching randoseru.",
       },
-      { name: "twitter:image", content: "/media/set-pairing.jpg" },
+      { name: "twitter:image", content: media("set-pairing.jpg") },
     ],
     links: [
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },

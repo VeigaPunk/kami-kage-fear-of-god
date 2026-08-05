@@ -126,7 +126,16 @@ function authPopupPlugin(): Plugin {
 // opens a second dev-server port, which breaks the single-port preview.
 // The dev server starts once `src/router.tsx` and `src/routes/` exist — see
 // AGENTS.md § "First scaffold".
+//
+// GitHub Pages: set NITRO_PRESET=github_pages (and optional GITHUB_PAGES=true)
+// so the static preset + project base path are used in CI.
+const isGithubPages =
+  process.env.NITRO_PRESET === "github_pages" || process.env.GITHUB_PAGES === "true";
+const nitroPreset = process.env.NITRO_PRESET || (isGithubPages ? "github_pages" : "vercel");
+const base = isGithubPages ? "/kami-kage-fear-of-god/" : "/";
+
 export default defineConfig(({ command }) => ({
+  base,
   server: {
     host: "0.0.0.0",
     port: 8080,
@@ -141,7 +150,7 @@ export default defineConfig(({ command }) => ({
     authPopupPlugin(),
     tailwindcss(),
     tanstackStart(),
-    ...(command === "build" ? [nitro({ preset: "vercel" })] : []),
+    ...(command === "build" ? [nitro({ preset: nitroPreset })] : []),
     viteReact(),
   ],
 }));

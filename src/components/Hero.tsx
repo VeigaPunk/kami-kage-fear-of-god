@@ -1,4 +1,5 @@
 import { Ornament, ThreeStripes } from "./Ornament";
+import { media } from "@/lib/assets";
 
 export function Hero() {
   return (
@@ -10,11 +11,11 @@ export function Hero() {
           muted
           loop
           playsInline
-          poster="/media/leather.png"
+          poster={media("leather.jpg")}
           aria-hidden="true"
           tabIndex={-1}
         >
-          <source src="/media/runway.mp4" type="video/mp4" />
+          <source src={media("runway.mp4")} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-[linear-gradient(to_top,rgb(10_10_10)_0%,rgb(10_10_10/0.55)_42%,rgb(10_10_10/0.35)_100%)]" />
       </div>

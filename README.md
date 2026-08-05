@@ -30,6 +30,18 @@ Quality gates live in `verifier/` (acceptance criteria + timestamped run logs).
 3. Build command: `npm run build`
 4. Deploy
 
+Live: https://kami-kage-fear-of-god.vercel.app/
+
+## Deploy (GitHub Pages)
+
+Pushes to `main` run `.github/workflows/deploy-pages.yml`, which builds with
+`NITRO_PRESET=github_pages` and deploys to GitHub Pages.
+
+- Site: https://veigapunk.github.io/kami-kage-fear-of-god/
+- Manual re-run: Actions → **Deploy to GitHub Pages** → **Run workflow**
+
+Repo Settings → Pages → Source must be **GitHub Actions** (created on first deploy).
+
 ## Concept
 
 | Mark          | Meaning                   |
@@ -42,4 +54,4 @@ Quality gates live in `verifier/` (acceptance criteria + timestamped run logs).
 Not an official adidas or Fear of God product page — editorial concept exploration.
 
 ---
-_Last push: 2026-07-30 (trigger redeploy)_
+_Last push: 2026-08-05 — fixed leather product photo + GitHub Pages_

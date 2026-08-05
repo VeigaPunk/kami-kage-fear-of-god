@@ -1,4 +1,5 @@
 import { Ornament, ThreeStripes } from "./Ornament";
+import { media } from "@/lib/assets";
 
 export function Runway() {
   return (
@@ -55,10 +56,10 @@ export function Runway() {
               className="h-full w-full object-cover"
               controls
               playsInline
-              poster="/media/leather.png"
+              poster={media("leather.jpg")}
               preload="metadata"
             >
-              <source src="/media/runway.mp4" type="video/mp4" />
+              <source src={media("runway.mp4")} type="video/mp4" />
             </video>
           </div>
           <div className="flex flex-col gap-2 border-t border-fg-inverse/10 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">

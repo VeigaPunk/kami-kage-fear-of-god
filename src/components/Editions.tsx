@@ -1,4 +1,5 @@
 import { Ornament, ThreeStripes } from "./Ornament";
+import { media } from "@/lib/assets";
 
 const editions = [
   {
@@ -9,7 +10,7 @@ const editions = [
     material: "Full-grain leather",
     description:
       "Spazzolato-smooth optic white leather with a wrap strap, embossed three-stripe language, and a translucent air unit. Issued only as the numbered Zhu Rong set of 333 with matching randoseru.",
-    image: "/media/leather.png",
+    image: media("leather.jpg"),
     specs: ["Full-grain upper", "Three Stripes emboss", "Visible air heel", "Matched hide"],
   },
   {
@@ -20,7 +21,7 @@ const editions = [
     material: "Engineered knit",
     description:
       "A lighter expression in monochrome knit — engineered mesh panels, trefoil language, and the same high-cut volume for daily wear. Three-stripe DNA, softened.",
-    image: "/media/knit.png",
+    image: media("knit.png"),
     specs: ["Engineered knit", "Breathable panels", "Air cushion", "Sock-like fit"],
   },
 ];
