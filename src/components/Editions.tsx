@@ -56,13 +56,13 @@ export function Editions() {
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
                 />
                 <div className="absolute left-0 top-0 flex">
-                  <span className="bg-bg-elevated/95 px-4 py-2.5 font-body text-[9px] font-medium uppercase tracking-label text-fg backdrop-blur-sm">
+                  <span className="bg-bg-elevated/95 px-4 py-2.5 font-body text-[10px] font-medium uppercase tracking-label text-fg backdrop-blur-sm">
                     {item.tag}
                   </span>
                 </div>
               </div>
               <div className="flex flex-1 flex-col px-7 py-8 sm:px-9 sm:py-10">
-                <p className="font-body text-[9px] uppercase tracking-label text-fg-subtle">
+                <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">
                   {item.label} · {item.material}
                 </p>
                 <h3 className="mt-3 font-display text-3xl tracking-display">{item.name}</h3>

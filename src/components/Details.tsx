@@ -19,11 +19,13 @@ export function Details() {
   return (
     <section id="details" className="border-b border-border bg-bg-elevated">
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-32 lg:px-10">
-        <div className="max-w-xl">
+        <div className="max-w-xl lg:max-w-2xl">
           <p className="font-body text-[10px] font-medium uppercase tracking-label text-fg-subtle">
             05 — Specifications
           </p>
-          <h2 className="mt-4 font-display text-4xl tracking-display sm:text-5xl">Side by side</h2>
+          <h2 className="mt-4 font-display text-4xl tracking-display sm:text-5xl lg:text-6xl">
+            Side by side
+          </h2>
           <Ornament className="mt-6 max-w-[7rem]" />
           <p className="mt-6 font-body text-sm leading-relaxed text-fg-muted text-pretty">
             Same bones, different skins — both carry the Three Stripes. The leather path is
@@ -31,25 +33,44 @@ export function Details() {
           </p>
         </div>
 
-        <div className="mt-14 overflow-x-auto">
+        {/* mobile stacked cards */}
+        <div className="mt-14 space-y-4 sm:hidden">
+          {rows.map((row) => (
+            <div key={row.label} className="border-b border-border pb-4">
+              <p className="font-body text-[10px] font-medium uppercase tracking-label text-fg-subtle">
+                {row.label}
+              </p>
+              <p className="mt-2 font-body text-lg tracking-normal text-fg">{row.leather}</p>
+              <p className="mt-1 font-body text-base tracking-normal text-fg-muted">{row.knit}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* tablet+ table */}
+        <div
+          className="mt-14 hidden overflow-x-auto focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-fg sm:block"
+          role="region"
+          aria-label="Kami Kage specifications"
+          tabIndex={0}
+        >
           <table className="w-full min-w-[640px] border-collapse text-left">
             <thead>
               <tr className="border-b border-border">
                 <th
                   scope="col"
-                  className="pb-5 pr-4 font-body text-[9px] font-medium uppercase tracking-label text-fg-subtle"
+                  className="pb-5 pr-4 text-left font-body text-[10px] font-medium uppercase tracking-label text-fg-subtle"
                 >
                   Spec
                 </th>
                 <th
                   scope="col"
-                  className="pb-5 pr-4 font-body text-[9px] font-medium uppercase tracking-label text-fg-subtle"
+                  className="pb-5 pr-4 text-left font-body text-[10px] font-medium uppercase tracking-label text-fg-subtle"
                 >
                   Leather · 三三三
                 </th>
                 <th
                   scope="col"
-                  className="pb-5 font-body text-[9px] font-medium uppercase tracking-label text-fg-subtle"
+                  className="pb-5 text-left font-body text-[10px] font-medium uppercase tracking-label text-fg-subtle"
                 >
                   Knit
                 </th>
@@ -58,10 +79,13 @@ export function Details() {
             <tbody>
               {rows.map((row) => (
                 <tr key={row.label} className="border-b border-border">
-                  <td className="py-6 pr-4 align-top font-body text-[10px] font-medium uppercase tracking-label text-fg-muted">
+                  <th
+                    scope="row"
+                    className="py-6 pr-4 text-left font-body text-[10px] font-medium uppercase tracking-label text-fg-muted"
+                  >
                     {row.label}
-                  </td>
-                  <td className="py-6 pr-4 align-top font-display text-lg tracking-display text-fg sm:text-xl">
+                  </th>
+                  <td className="py-6 pr-4 align-top font-body text-base tracking-normal text-fg sm:text-lg">
                     {row.leather.includes("三") ||
                     row.leather.includes("Zhu") ||
                     row.leather.includes("Three") ? (
@@ -76,7 +100,7 @@ export function Details() {
                       row.leather
                     )}
                   </td>
-                  <td className="py-6 align-top font-display text-lg tracking-display text-fg sm:text-xl">
+                  <td className="py-6 align-top font-body text-base tracking-normal text-fg sm:text-lg">
                     {row.knit}
                   </td>
                 </tr>

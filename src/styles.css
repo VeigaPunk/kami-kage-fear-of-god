@@ -8,14 +8,12 @@
   --color-bg-deep: #161412;
   --color-fg: #141210;
   --color-fg-muted: #5a554c;
-  --color-fg-subtle: #8a8478;
+  --color-fg-subtle: #6f695d;
   --color-fg-inverse: #f4f0e8;
   --color-border: #d9d2c4;
   --color-border-strong: #b8b0a0;
   --color-accent: #1a1714;
   --color-accent-fg: #f4f0e8;
-  --color-ember: #8b5a3c;
-  --color-ember-soft: #c4a484;
 
   --font-display: "Cormorant Garamond", "Times New Roman", Georgia, serif;
   --font-cjk: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
@@ -58,6 +56,13 @@
   img {
     outline: 1px solid rgb(20 18 16 / 0.08);
     outline-offset: -1px;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
   }
 }
 
@@ -137,5 +142,20 @@
   .reveal-delay-3,
   .reveal-delay-4 {
     animation: none;
+  }
+}
+
+/* Scroll reveal: JS-gated (html.js-reveal) so no-JS keeps content visible */
+@media (prefers-reduced-motion: no-preference) {
+  html.js-reveal .reveal-scroll {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  html.js-reveal .reveal-scroll.is-revealed {
+    opacity: 1;
+    transform: none;
   }
 }

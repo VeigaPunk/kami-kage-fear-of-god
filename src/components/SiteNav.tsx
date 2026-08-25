@@ -47,9 +47,9 @@ export function SiteNav() {
         <a href="#top" className="flex items-center gap-3">
           <ThreeStripes tone={light ? "light" : "dark"} size="sm" orientation="diagonal" />
           <span className="hidden h-4 w-px bg-current opacity-20 sm:block" />
-          <span className="flex flex-col leading-none">
+          <span className="flex flex-col leading-none whitespace-nowrap">
             <span
-              className={`font-body text-[9px] font-medium uppercase tracking-label transition-colors ${
+              className={`font-body text-[10px] font-medium uppercase tracking-label transition-colors ${
                 light ? "text-fg-subtle" : "text-fg-inverse/55"
               }`}
             >

@@ -25,11 +25,11 @@ export function LimitedSet() {
             <div className="flex items-center gap-3">
               <ThreeStripes tone="dark" size="sm" orientation="diagonal" />
               <span className="h-px w-6 bg-fg-inverse/20" />
-              <span className="font-cjk text-sm tracking-wide-cjk text-fg-inverse/45" lang="zh">
+              <span className="font-cjk text-sm tracking-wide-cjk text-fg-inverse/65" lang="zh">
                 祝融
               </span>
               <span className="h-px w-6 bg-fg-inverse/20" />
-              <p className="font-body text-[10px] font-medium uppercase tracking-label text-fg-inverse/45">
+              <p className="font-body text-[10px] font-medium uppercase tracking-label text-fg-inverse/65">
                 03 — Numbered Edition
               </p>
             </div>
@@ -55,7 +55,7 @@ export function LimitedSet() {
             <div className="mt-10 border border-fg-inverse/12 bg-fg-inverse/[0.03] p-7 sm:p-9">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <p className="font-body text-[9px] uppercase tracking-label text-fg-inverse/40">
+                  <p className="font-body text-[10px] uppercase tracking-label text-fg-inverse/70">
                     Serial plaque
                   </p>
                   <p
@@ -66,7 +66,7 @@ export function LimitedSet() {
                     {display}
                   </p>
                   <p className="sr-only">Each unit is hand-numbered from 001 to 333.</p>
-                  <p className="mt-1 font-body text-[11px] text-fg-inverse/40">of {TOTAL}</p>
+                  <p className="mt-1 font-body text-[11px] text-fg-inverse/70">of {TOTAL}</p>
                 </div>
                 <div className="flex flex-col items-center gap-3 border border-fg-inverse/20 px-4 py-3">
                   <ThreeStripes tone="dark" size="sm" orientation="diagonal" />
@@ -117,7 +117,7 @@ export function LimitedSet() {
                 className="aspect-[16/10] w-full object-cover"
               />
               <figcaption className="flex items-center justify-between border-t border-fg-inverse/10 px-5 py-4">
-                <span className="font-body text-[10px] uppercase tracking-label text-fg-inverse/45">
+                <span className="font-body text-[10px] uppercase tracking-label text-fg-inverse/65">
                   The set — footwear & randoseru
                 </span>
                 <ThreeStripes tone="dark" size="sm" orientation="diagonal" />
@@ -129,7 +129,7 @@ export function LimitedSet() {
                 alt="Kami Kage full-grain leather high-top"
                 className="aspect-square w-full object-cover"
               />
-              <figcaption className="border-t border-fg-inverse/10 px-4 py-3 font-body text-[9px] uppercase tracking-label text-fg-inverse/45">
+              <figcaption className="border-t border-fg-inverse/10 px-4 py-3 font-body text-[10px] uppercase tracking-label text-fg-inverse/65">
                 Kami Kage Leather
               </figcaption>
             </figure>
@@ -139,7 +139,7 @@ export function LimitedSet() {
                 alt="White leather randoseru backpack"
                 className="aspect-square w-full object-cover"
               />
-              <figcaption className="border-t border-fg-inverse/10 px-4 py-3 font-body text-[9px] uppercase tracking-label text-fg-inverse/45">
+              <figcaption className="border-t border-fg-inverse/10 px-4 py-3 font-body text-[10px] uppercase tracking-label text-fg-inverse/65">
                 Randoseru · White Leather
               </figcaption>
             </figure>

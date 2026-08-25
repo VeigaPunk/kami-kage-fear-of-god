@@ -28,7 +28,7 @@ export function Runway() {
                 { k: "Codex", v: "祝融" },
               ].map((item) => (
                 <div key={item.k}>
-                  <dt className="font-body text-[9px] uppercase tracking-label text-fg-subtle">
+                  <dt className="font-body text-[10px] uppercase tracking-label text-fg-subtle">
                     {item.k}
                   </dt>
                   {item.v === "stripes" ? (
@@ -59,11 +59,19 @@ export function Runway() {
               poster={media("leather.jpg")}
               preload="metadata"
             >
+              <source src={media("runway.webm")} type="video/webm" />
               <source src={media("runway.mp4")} type="video/mp4" />
+              <track
+                kind="captions"
+                src={media("runway-captions.vtt")}
+                srcLang="en"
+                label="English"
+                default
+              />
             </video>
           </div>
           <div className="flex flex-col gap-2 border-t border-fg-inverse/10 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
-            <p className="font-body text-[10px] uppercase tracking-label text-fg-inverse/50">
+            <p className="font-body text-[10px] uppercase tracking-label text-fg-inverse/65">
               Runway film — Kami Kage presentation
             </p>
             <ThreeStripes tone="dark" size="sm" orientation="diagonal" />

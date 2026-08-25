@@ -1,46 +1,56 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
-import { AuthProvider } from "@/lib/auth/provider";
 import appCss from "../styles.css?url";
-import { asset, media } from "@/lib/assets";
+import { asset } from "@/lib/assets";
+
+const SITE_URL = "https://veigapunk.github.io/kami-kage-fear-of-god/";
+const OG_IMAGE = `${SITE_URL}media/set-pairing.jpg`;
+const TITLE = "adidas Kami Kage × Fear of God — 祝融 · 三三三";
+const DESCRIPTION =
+  "Editorial exploration of the adidas Kami Kage × Fear of God collaboration — Zhu Rong coded leather set of 333 with matching randoseru.";
+const OG_DESCRIPTION =
+  "Three stripes. Three threes. One quiet fire — the Zhu Rong coded leather set of 333 with matching randoseru.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: TITLE,
+  description: DESCRIPTION,
+  image: OG_IMAGE,
+  url: SITE_URL,
+  mainEntityOfPage: { "@type": "WebPage", "@id": SITE_URL },
+  about: [
+    { "@type": "Thing", name: "adidas Kami Kage × Fear of God" },
+    { "@type": "Thing", name: "Zhu Rong 祝融 numbered set of 333" },
+  ],
+  isAccessibleForFree: true,
+  inLanguage: "en",
+};
 
 export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        title: "adidas Kami Kage × Fear of God — 祝融 · 三三三",
-      },
-      {
-        name: "description",
-        content:
-          "Editorial exploration of the adidas Kami Kage × Fear of God collaboration — Zhu Rong coded leather set of 333 with matching randoseru.",
-      },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
       { name: "theme-color", content: "#0a0a0a" },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Kami Kage — Editorial Concept" },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: OG_DESCRIPTION },
+      { property: "og:image", content: OG_IMAGE },
       {
-        property: "og:title",
-        content: "adidas Kami Kage × Fear of God — 祝融 · 三三三",
+        property: "og:image:alt",
+        content: "Kami Kage leather boots paired with white leather randoseru backpack",
       },
-      {
-        property: "og:description",
-        content:
-          "Three stripes. Three threes. One quiet fire — the Zhu Rong coded leather set of 333 with matching randoseru.",
-      },
-      { property: "og:image", content: media("set-pairing.jpg") },
       { name: "twitter:card", content: "summary_large_image" },
-      {
-        name: "twitter:title",
-        content: "adidas Kami Kage × Fear of God — 祝融 · 三三三",
-      },
-      {
-        name: "twitter:description",
-        content:
-          "Three stripes. Three threes. One quiet fire — the Zhu Rong coded leather set of 333 with matching randoseru.",
-      },
-      { name: "twitter:image", content: media("set-pairing.jpg") },
+      { name: "twitter:title", content: TITLE },
+      { name: "twitter:description", content: OG_DESCRIPTION },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
     links: [
+      { rel: "canonical", href: SITE_URL },
       { rel: "icon", href: asset("favicon.svg"), type: "image/svg+xml" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -51,9 +61,15 @@ export const Route = createRootRoute({
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Noto+Serif+JP:wght@400;500;600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap",
+      },
+      {
+        // CJK subset: only the glyphs this site renders (一二三四影火祝融鞄鞋)
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&text=%E4%B8%80%E4%BA%8C%E4%B8%89%E5%9B%9B%E5%BD%B1%E7%81%AB%E7%A5%9D%E8%9E%8D%E9%9E%84%E9%9E%8B&display=swap",
       },
     ],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify(jsonLd) }],
   }),
   component: RootDocument,
 });
@@ -71,9 +87,7 @@ function RootDocument() {
         >
           Skip to content
         </a>
-        <AuthProvider>
-          <Outlet />
-        </AuthProvider>
+        <Outlet />
         <Scripts />
       </body>
     </html>

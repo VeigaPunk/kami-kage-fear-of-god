@@ -47,7 +47,7 @@ export function Story() {
                 { k: "Codex", v: "祝融 · 三" as const, label: "祝融 · 三" },
               ].map((item) => (
                 <div key={item.k}>
-                  <dt className="font-body text-[9px] uppercase tracking-label text-fg-subtle">
+                  <dt className="font-body text-[10px] uppercase tracking-label text-fg-subtle">
                     {item.k}
                   </dt>
                   {item.v === "stripes" ? (

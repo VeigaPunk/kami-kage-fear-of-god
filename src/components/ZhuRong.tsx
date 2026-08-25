@@ -51,14 +51,14 @@ export function ZhuRong() {
         <div className="mx-auto mt-14 flex max-w-lg flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-10">
           <div className="flex flex-col items-center gap-3">
             <ThreeStripes size="lg" orientation="diagonal" />
-            <p className="font-body text-[9px] uppercase tracking-label text-fg-subtle">adidas</p>
+            <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">adidas</p>
           </div>
           <span className="font-display text-2xl text-fg-subtle/40">→</span>
           <div className="flex flex-col items-center gap-2">
             <span className="font-cjk text-4xl leading-none text-fg" lang="zh">
               三
             </span>
-            <p className="font-body text-[9px] uppercase tracking-label text-fg-subtle">
+            <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">
               Kanji · Three
             </p>
           </div>
@@ -67,7 +67,7 @@ export function ZhuRong() {
             <span className="font-cjk text-2xl leading-none tracking-wide-cjk text-fg" lang="zh">
               三三三
             </span>
-            <p className="font-body text-[9px] uppercase tracking-label text-fg-subtle">
+            <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">
               333 Units
             </p>
           </div>
