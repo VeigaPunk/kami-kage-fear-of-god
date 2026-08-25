@@ -75,7 +75,12 @@ const ms: Messages = {
     leatherMaterial: "Kulit full-grain",
     leatherDesc:
       "Kulit putih optik licin spazzolato dengan tali balut, bahasa tiga jalur berembos, dan unit udara lutsinar. Dikeluarkan hanya sebagai set Zhu Rong bernombor 333 dengan randoseru sepadan.",
-    leatherSpecs: ["Upper full-grain", "Embos Three Stripes", "Tumit udara kelihatan", "Kulit sepadan"],
+    leatherSpecs: [
+      "Upper full-grain",
+      "Embos Three Stripes",
+      "Tumit udara kelihatan",
+      "Kulit sepadan",
+    ],
     leatherCta: "Temui set",
     knitLabel: "Edition 02",
     knitName: "Kami Kage Knit",

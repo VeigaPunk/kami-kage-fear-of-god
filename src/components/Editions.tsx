@@ -1,6 +1,6 @@
 import { Ornament, ThreeStripes } from "./Ornament";
 import { media } from "@/lib/assets";
-import { useI18n } from "@/i18n/I18nProvider";
+import { useI18n } from "@/i18n/useI18n";
 
 export function Editions() {
   const { t } = useI18n();

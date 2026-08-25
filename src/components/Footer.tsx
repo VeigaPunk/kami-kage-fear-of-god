@@ -1,5 +1,5 @@
 import { Ornament, ThreeStripes } from "./Ornament";
-import { useI18n } from "@/i18n/I18nProvider";
+import { useI18n } from "@/i18n/useI18n";
 
 function isCjkOnly(label: string) {
   return /[\u4e00-\u9fff]/.test(label) && !label.includes("·");

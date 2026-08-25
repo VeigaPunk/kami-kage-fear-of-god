@@ -75,7 +75,12 @@ const ptBR: Messages = {
     leatherMaterial: "Couro full-grain",
     leatherDesc:
       "Couro branco óptico liso spazzolato com cinta de envolvimento, linguagem das três listras em relevo e unidade de ar translúcida. Emitido apenas como o set Zhu Rong numerado de 333 com randoseru correspondente.",
-    leatherSpecs: ["Cabedal full-grain", "Relevo Three Stripes", "Calcanhar de ar visível", "Couro correspondente"],
+    leatherSpecs: [
+      "Cabedal full-grain",
+      "Relevo Three Stripes",
+      "Calcanhar de ar visível",
+      "Couro correspondente",
+    ],
     leatherCta: "Descobrir o set",
     knitLabel: "Edition 02",
     knitName: "Kami Kage Knit",
@@ -83,7 +88,12 @@ const ptBR: Messages = {
     knitMaterial: "Knit engenheirado",
     knitDesc:
       "Uma expressão mais leve em knit monocromático — painéis de mesh engenheirado, linguagem trefoil e o mesmo volume cano alto para o uso diário. DNA das três listras, suavizado.",
-    knitSpecs: ["Knit engenheirado", "Painéis respiráveis", "Amortecimento a ar", "Ajuste tipo meia"],
+    knitSpecs: [
+      "Knit engenheirado",
+      "Painéis respiráveis",
+      "Amortecimento a ar",
+      "Ajuste tipo meia",
+    ],
     knitCta: "Detalhes técnicos",
   },
   limited: {

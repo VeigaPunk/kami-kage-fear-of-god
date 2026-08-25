@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { ThreeStripes } from "./Ornament";
-import { useI18n } from "@/i18n/I18nProvider";
+import { useI18n } from "@/i18n/useI18n";
 import { LOCALE_META, type Locale } from "@/i18n/types";
 
 function isCjk(label: string) {

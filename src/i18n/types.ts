@@ -1,10 +1,7 @@
 export const LOCALES = ["en", "ja", "zh-CN", "ms", "pt-BR", "de"] as const;
 export type Locale = (typeof LOCALES)[number];
 
-export const LOCALE_META: Record<
-  Locale,
-  { label: string; native: string; htmlLang: string }
-> = {
+export const LOCALE_META: Record<Locale, { label: string; native: string; htmlLang: string }> = {
   en: { label: "English", native: "EN", htmlLang: "en" },
   ja: { label: "Japanese", native: "日本語", htmlLang: "ja" },
   "zh-CN": { label: "Chinese", native: "中文", htmlLang: "zh-CN" },

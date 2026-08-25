@@ -75,7 +75,12 @@ const de: Messages = {
     leatherMaterial: "Full-Grain-Leder",
     leatherDesc:
       "Spazzolato-glattes opticweißes Leder mit Wickelriemen, geprägter Three-Stripes-Sprache und transluzenter Air-Unit. Nur als nummeriertes Zhu-Rong-Set von 333 mit passendem Randoseru ausgegeben.",
-    leatherSpecs: ["Full-Grain-Upper", "Three-Stripes-Prägung", "Sichtbarer Air-Absatz", "Passende Haut"],
+    leatherSpecs: [
+      "Full-Grain-Upper",
+      "Three-Stripes-Prägung",
+      "Sichtbarer Air-Absatz",
+      "Passende Haut",
+    ],
     leatherCta: "Das Set entdecken",
     knitLabel: "Edition 02",
     knitName: "Kami Kage Knit",
@@ -83,7 +88,12 @@ const de: Messages = {
     knitMaterial: "Engineered Knit",
     knitDesc:
       "Ein leichterer Ausdruck in monochromem Knit — engineered Mesh-Panels, Trefoil-Sprache und dasselbe High-Cut-Volumen für den Alltag. Three-Stripes-DNA, weicher gezogen.",
-    knitSpecs: ["Engineered Knit", "Atmungsaktive Panels", "Air-Dämpfung", "Sockenähnliche Passform"],
+    knitSpecs: [
+      "Engineered Knit",
+      "Atmungsaktive Panels",
+      "Air-Dämpfung",
+      "Sockenähnliche Passform",
+    ],
     knitCta: "Technische Details",
   },
   limited: {
@@ -152,7 +162,11 @@ const de: Messages = {
         leather: "Unit Sole + transluzente Air",
         knit: "Unit Sole + transluzente Air",
       },
-      { label: "Edition", leather: "三三三 · Zhu-Rong-versiegelt", knit: "Offene Veröffentlichung" },
+      {
+        label: "Edition",
+        leather: "三三三 · Zhu-Rong-versiegelt",
+        knit: "Offene Veröffentlichung",
+      },
       { label: "Begleiter", leather: "Weißes Leder-Randoseru", knit: "—" },
       { label: "Präsentation", leather: "Archivbox + 三-Plakette", knit: "Standardbox" },
     ],

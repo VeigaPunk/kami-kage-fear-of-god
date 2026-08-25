@@ -1,12 +1,4 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-  type ReactNode,
-} from "react";
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
 import {
   DEFAULT_LOCALE,
   LOCALE_META,
@@ -15,6 +7,7 @@ import {
   type Locale,
   type Messages,
 } from "./types";
+import { I18nContext, type I18nValue } from "./context";
 import en from "./locales/en";
 import ja from "./locales/ja";
 import zhCN from "./locales/zh-CN";
@@ -30,16 +23,6 @@ const catalogs: Record<Locale, Messages> = {
   "pt-BR": ptBR,
   de,
 };
-
-type I18nValue = {
-  locale: Locale;
-  setLocale: (locale: Locale) => void;
-  t: Messages;
-  meta: (typeof LOCALE_META)[Locale];
-  locales: typeof LOCALES;
-};
-
-const I18nContext = createContext<I18nValue | null>(null);
 
 function readInitialLocale(): Locale {
   if (typeof window === "undefined") return DEFAULT_LOCALE;
@@ -90,10 +73,4 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   );
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
-}
-
-export function useI18n(): I18nValue {
-  const ctx = useContext(I18nContext);
-  if (!ctx) throw new Error("useI18n must be used within I18nProvider");
-  return ctx;
 }
