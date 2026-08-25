@@ -3,12 +3,14 @@ import appCss from "../styles.css?url";
 import { asset } from "@/lib/assets";
 
 const SITE_URL = "https://veigapunk.github.io/kami-kage-fear-of-god/";
-const OG_IMAGE = `${SITE_URL}media/set-pairing.jpg`;
+const OG_IMAGE = `${SITE_URL}media/leather.jpg`;
 const TITLE = "adidas Kami Kage × Fear of God — 祝融 · 三三三";
 const DESCRIPTION =
   "Editorial exploration of the adidas Kami Kage × Fear of God collaboration — Zhu Rong coded leather set of 333 with matching randoseru.";
 const OG_DESCRIPTION =
   "Three stripes. Three threes. One quiet fire — the Zhu Rong coded leather set of 333 with matching randoseru.";
+const OG_IMAGE_ALT =
+  "Kami Kage Fear of God Athletics × adidas Originals Superstar — leather edition";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -42,18 +44,12 @@ export const Route = createRootRoute({
       { property: "og:image", content: OG_IMAGE },
       { property: "og:image:width", content: "1168" },
       { property: "og:image:height", content: "784" },
-      {
-        property: "og:image:alt",
-        content: "Kami Kage leather boots paired with white leather randoseru backpack",
-      },
+      { property: "og:image:alt", content: OG_IMAGE_ALT },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: OG_DESCRIPTION },
       { name: "twitter:image", content: OG_IMAGE },
-      {
-        name: "twitter:image:alt",
-        content: "Kami Kage leather boots paired with white leather randoseru backpack",
-      },
+      { name: "twitter:image:alt", content: OG_IMAGE_ALT },
     ],
     links: [
       { rel: "canonical", href: SITE_URL },
