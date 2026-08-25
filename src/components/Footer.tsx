@@ -24,7 +24,9 @@ export function Footer() {
 
         <div className="mt-16 grid gap-10 border-t border-border pt-12 sm:grid-cols-3 lg:grid-cols-4">
           <div>
-            <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">Navigate</p>
+            <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">
+              Navigate
+            </p>
             <ul className="mt-4 space-y-2.5">
               {[
                 ["#story", "Story"],
@@ -48,7 +50,9 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">Editions</p>
+            <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">
+              Editions
+            </p>
             <ul className="mt-4 space-y-2.5 font-body text-sm text-fg-muted">
               <li>Leather · 三三三</li>
               <li>Knit · Open</li>

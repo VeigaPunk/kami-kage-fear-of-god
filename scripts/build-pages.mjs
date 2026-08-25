@@ -8,14 +8,7 @@
  *  4. Emit `.output/public` for actions/upload-pages-artifact
  */
 import { spawnSync } from "node:child_process";
-import {
-  cpSync,
-  existsSync,
-  mkdirSync,
-  rmSync,
-  writeFileSync,
-  readFileSync,
-} from "node:fs";
+import { cpSync, existsSync, mkdirSync, rmSync, writeFileSync, readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -40,9 +33,7 @@ if (build.status !== 0) {
   process.exit(build.status ?? 1);
 }
 
-const entry = pathToFileURL(
-  join(root, ".vercel/output/functions/__server.func/index.mjs"),
-).href;
+const entry = pathToFileURL(join(root, ".vercel/output/functions/__server.func/index.mjs")).href;
 const { default: handler } = await import(entry);
 if (!handler?.fetch) {
   console.error("[build-pages] serverless handler has no fetch()");
@@ -54,7 +45,9 @@ async function render(pathname) {
   const res = await handler.fetch(new Request(url));
   const html = await res.text();
   if (res.status >= 500 || !html.includes("Kami Kage")) {
-    console.error(`[build-pages] render ${pathname} failed status=${res.status} len=${html.length}`);
+    console.error(
+      `[build-pages] render ${pathname} failed status=${res.status} len=${html.length}`,
+    );
     process.exit(1);
   }
   return html;
@@ -76,10 +69,7 @@ writeFileSync(join(outDir, "404.html"), notFoundHtml);
 writeFileSync(join(outDir, ".nojekyll"), "");
 
 console.log("[build-pages] wrote", outDir);
-console.log(
-  "[build-pages] index.html bytes",
-  readFileSync(join(outDir, "index.html")).length,
-);
+console.log("[build-pages] index.html bytes", readFileSync(join(outDir, "index.html")).length);
 // quick sanity: leather image referenced
 const html = readFileSync(join(outDir, "index.html"), "utf8");
 if (!html.includes("leather.jpg")) {

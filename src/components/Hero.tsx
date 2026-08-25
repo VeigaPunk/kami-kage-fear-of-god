@@ -141,7 +141,6 @@ export function Hero() {
       <button
         type="button"
         onClick={toggleVideo}
-        aria-pressed={!playing}
         aria-label={playing ? "Pause background video" : "Play background video"}
         className="absolute bottom-5 right-5 z-10 inline-flex h-11 w-11 items-center justify-center border border-fg-inverse/30 text-fg-inverse/80 transition-colors hover:border-fg-inverse/60 hover:text-fg-inverse sm:bottom-8 sm:right-8"
       >

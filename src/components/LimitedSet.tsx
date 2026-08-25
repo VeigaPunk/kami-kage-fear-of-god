@@ -4,7 +4,8 @@ import { media } from "@/lib/assets";
 
 const TOTAL = 333;
 
-export function LimitedSet() {
+/** Isolated so the 120ms ticker re-renders only the digits, not the section. */
+function SerialNumber() {
   const [serial, setSerial] = useState(1);
 
   useEffect(() => {
@@ -15,8 +16,15 @@ export function LimitedSet() {
     return () => window.clearInterval(id);
   }, []);
 
-  const display = String(serial).padStart(3, "0");
+  return (
+    <>
+      <span className="text-fg-inverse/30">#</span>
+      {String(serial).padStart(3, "0")}
+    </>
+  );
+}
 
+export function LimitedSet() {
   return (
     <section id="limited" className="border-b border-border bg-bg-ink text-fg-inverse">
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-32 lg:px-10">
@@ -62,8 +70,7 @@ export function LimitedSet() {
                     className="mt-4 font-mono text-4xl tabular-nums tracking-tight text-fg-inverse sm:text-5xl"
                     aria-hidden="true"
                   >
-                    <span className="text-fg-inverse/30">#</span>
-                    {display}
+                    <SerialNumber />
                   </p>
                   <p className="sr-only">Each unit is hand-numbered from 001 to 333.</p>
                   <p className="mt-1 font-body text-[11px] text-fg-inverse/70">of {TOTAL}</p>
@@ -114,6 +121,8 @@ export function LimitedSet() {
               <img
                 src={media("set-pairing.jpg")}
                 alt="Kami Kage leather boots paired with white leather randoseru backpack"
+                loading="lazy"
+                decoding="async"
                 className="aspect-[16/10] w-full object-cover"
               />
               <figcaption className="flex items-center justify-between border-t border-fg-inverse/10 px-5 py-4">
@@ -127,6 +136,8 @@ export function LimitedSet() {
               <img
                 src={media("leather.jpg")}
                 alt="Kami Kage full-grain leather high-top"
+                loading="lazy"
+                decoding="async"
                 className="aspect-square w-full object-cover"
               />
               <figcaption className="border-t border-fg-inverse/10 px-4 py-3 font-body text-[10px] uppercase tracking-label text-fg-inverse/65">
@@ -137,6 +148,8 @@ export function LimitedSet() {
               <img
                 src={media("randoseru.jpg")}
                 alt="White leather randoseru backpack"
+                loading="lazy"
+                decoding="async"
                 className="aspect-square w-full object-cover"
               />
               <figcaption className="border-t border-fg-inverse/10 px-4 py-3 font-body text-[10px] uppercase tracking-label text-fg-inverse/65">

@@ -30,6 +30,12 @@ jobs:
       - name: Install
         run: npm ci
 
+      - name: Verify (typecheck + lint + format)
+        run: |
+          npm run typecheck
+          npm run lint
+          npx prettier --check .
+
       - name: Build static Pages site
         run: npm run build:pages
 

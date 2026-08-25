@@ -21,7 +21,7 @@ const editions = [
     material: "Engineered knit",
     description:
       "A lighter expression in monochrome knit — engineered mesh panels, trefoil language, and the same high-cut volume for daily wear. Three-stripe DNA, softened.",
-    image: media("knit.png"),
+    image: media("knit.jpg"),
     specs: ["Engineered knit", "Breathable panels", "Air cushion", "Sock-like fit"],
   },
 ];
@@ -53,6 +53,8 @@ export function Editions() {
                 <img
                   src={item.image}
                   alt={item.name}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
                 />
                 <div className="absolute left-0 top-0 flex">

@@ -40,6 +40,8 @@ export const Route = createRootRoute({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: OG_DESCRIPTION },
       { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:width", content: "1168" },
+      { property: "og:image:height", content: "784" },
       {
         property: "og:image:alt",
         content: "Kami Kage leather boots paired with white leather randoseru backpack",
@@ -48,6 +50,10 @@ export const Route = createRootRoute({
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: OG_DESCRIPTION },
       { name: "twitter:image", content: OG_IMAGE },
+      {
+        name: "twitter:image:alt",
+        content: "Kami Kage leather boots paired with white leather randoseru backpack",
+      },
     ],
     links: [
       { rel: "canonical", href: SITE_URL },

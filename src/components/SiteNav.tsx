@@ -65,7 +65,7 @@ export function SiteNav() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
           {links.map((link) => (
             <a
               key={link.href}
@@ -113,7 +113,7 @@ export function SiteNav() {
 
       {open && (
         <div className="border-t border-border bg-bg lg:hidden">
-          <nav className="flex flex-col px-5 py-2">
+          <nav className="flex flex-col px-5 py-2" aria-label="Primary">
             {links.map((link) => (
               <a
                 key={link.href}

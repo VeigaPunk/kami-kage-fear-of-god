@@ -53,4 +53,5 @@ the site into static files and publishes the `gh-pages` branch.
 Not an official adidas or Fear of God product page — editorial concept exploration.
 
 ---
+
 _Last push: 2026-08-05 — fixed leather product photo + GitHub Pages_
