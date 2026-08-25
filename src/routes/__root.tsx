@@ -3,14 +3,15 @@ import appCss from "../styles.css?url";
 import { asset } from "@/lib/assets";
 
 const SITE_URL = "https://veigapunk.github.io/kami-kage-fear-of-god/";
-const OG_IMAGE = `${SITE_URL}media/leather.jpg`;
+# Unique path so X/Twitter re-crawls instead of serving the cached backpack card.
+const OG_IMAGE = `${SITE_URL}media/og-leather-sneaker.jpg`;
 const TITLE = "adidas Kami Kage × Fear of God — 祝融 · 三三三";
 const DESCRIPTION =
   "Editorial exploration of the adidas Kami Kage × Fear of God collaboration — Zhu Rong coded leather set of 333 with matching randoseru.";
 const OG_DESCRIPTION =
   "Three stripes. Three threes. One quiet fire — the Zhu Rong coded leather set of 333 with matching randoseru.";
 const OG_IMAGE_ALT =
-  "Kami Kage Fear of God Athletics × adidas Originals Superstar — leather edition";
+  "Kami Kage leather sneaker — Fear of God Athletics × adidas Originals, shoes only";
 
 const jsonLd = {
   "@context": "https://schema.org",
