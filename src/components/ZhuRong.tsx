@@ -1,47 +1,50 @@
 import { Ornament, SanSeal, ThreeStripes } from "./Ornament";
-
-const pillars = [
-  {
-    mark: "stripes" as const,
-    kanji: "三",
-    title: "Three Stripes",
-    body: "adidas’s eternal mark — three parallel lines of motion. On Kami Kage they return as emboss, midsole cut, and the quiet logic of the whole set.",
-  },
-  {
-    mark: "kanji" as const,
-    kanji: "火",
-    title: "Zhu Rong · 祝融",
-    body: "The fire sovereign. Not chaos, but heat that clarifies form. The leather edition burns white — three stripes held in still flame.",
-  },
-  {
-    mark: "kanji" as const,
-    kanji: "影",
-    title: "Kami Kage",
-    body: "Divine shadow. Volume without noise. The silhouette that remains when the three stripes have finished speaking.",
-  },
-];
+import { useI18n } from "@/i18n/I18nProvider";
 
 export function ZhuRong() {
+  const { t } = useI18n();
+  const [titleLine1, titleLine2] = t.zhurong.title.split("\n");
+
+  const pillars = [
+    {
+      mark: "stripes" as const,
+      kanji: "三",
+      title: t.zhurong.p1Title,
+      body: t.zhurong.p1Body,
+    },
+    {
+      mark: "kanji" as const,
+      kanji: "火",
+      title: t.zhurong.p2Title,
+      body: t.zhurong.p2Body,
+    },
+    {
+      mark: "kanji" as const,
+      kanji: "影",
+      title: t.zhurong.p3Title,
+      body: t.zhurong.p3Body,
+    },
+  ];
+
   return (
     <section id="zhurong" className="border-b border-border bg-bg-elevated">
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-32 lg:px-10">
         <div className="flex flex-col items-center text-center">
           <SanSeal size="md" />
           <p className="mt-8 font-body text-[10px] font-medium uppercase tracking-label text-fg-subtle">
-            Codex · Three Stripes × 祝融
+            {t.zhurong.kicker}
           </p>
           <h2 className="mt-4 max-w-2xl font-display text-4xl tracking-display text-balance sm:text-5xl md:text-6xl">
-            Three is the brand.
-            <br className="hidden sm:block" />
-            Three is the seal.
+            {titleLine1}
+            {titleLine2 ? (
+              <>
+                <br className="hidden sm:block" />
+                {titleLine2}
+              </>
+            ) : null}
           </h2>
           <p className="mt-6 max-w-xl font-body text-sm leading-relaxed text-fg-muted text-pretty sm:text-base">
-            adidas is the house of the <span className="text-fg">Three Stripes</span> — three lines
-            of heritage, performance, and identity. Here that mark meets the kanji{" "}
-            <span className="font-cjk text-fg">三</span> and the fire of{" "}
-            <span className="italic text-fg">Zhu Rong</span> (祝融). The limited leather set is
-            coded <span className="font-cjk text-fg">三三三</span> — three hundred thirty-three
-            units — three threes for the three stripes.
+            {t.zhurong.body}
           </p>
         </div>
 
@@ -59,7 +62,7 @@ export function ZhuRong() {
               三
             </span>
             <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">
-              Kanji · Three
+              {t.zhurong.kanjiThree}
             </p>
           </div>
           <span className="font-display text-2xl text-fg-subtle/40">→</span>
@@ -68,7 +71,7 @@ export function ZhuRong() {
               三三三
             </span>
             <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">
-              333 Units
+              {t.zhurong.units}
             </p>
           </div>
         </div>
@@ -107,21 +110,16 @@ export function ZhuRong() {
                 三
               </p>
               <p className="mt-4 font-body text-[10px] uppercase tracking-label text-fg-subtle">
-                Three Stripes · 三 · 祝融
+                {t.zhurong.bridge}
               </p>
             </div>
           </div>
           <div className="space-y-5 lg:col-span-7 lg:col-start-6">
             <p className="font-display text-2xl leading-snug tracking-display italic text-pretty sm:text-3xl">
-              “Three stripes built the house. Three threes close the archive. One fire keeps them
-              white.”
+              {t.zhurong.quote}
             </p>
             <p className="font-body text-sm leading-relaxed text-fg-muted text-pretty">
-              On each leather tongue, the serial sits beside a vertical seal:{" "}
-              <span className="font-cjk text-fg">三三三</span> — the three stripes rewritten as
-              character. The same mark is foil-stamped inside the randoseru lid. Collectors do not
-              own “number 47” alone — they own one of three-hundred-thirty-three vessels of the
-              brand’s oldest number.
+              {t.zhurong.after}
             </p>
             <a
               href="#limited"
@@ -129,7 +127,7 @@ export function ZhuRong() {
             >
               <ThreeStripes size="sm" />
               <span className="h-px w-6 bg-fg" />
-              Enter the numbered set
+              {t.zhurong.cta}
             </a>
           </div>
         </div>

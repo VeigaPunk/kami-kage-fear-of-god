@@ -1,6 +1,24 @@
 import { Ornament, ThreeStripes } from "./Ornament";
+import { useI18n } from "@/i18n/I18nProvider";
+
+function isCjkOnly(label: string) {
+  return /[\u4e00-\u9fff]/.test(label) && !label.includes("·");
+}
 
 export function Footer() {
+  const { t } = useI18n();
+
+  const navLinks = [
+    ["#story", t.nav.story],
+    ["#zhurong", t.nav.zhurong],
+    ["#editions", t.nav.editions],
+    ["#limited", t.nav.limited],
+    ["#runway", t.nav.runway],
+    ["#details", t.nav.details],
+  ] as const;
+
+  const taglineParts = t.footer.tagline.split("祝融");
+
   return (
     <footer className="bg-bg">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24 lg:px-10">
@@ -10,14 +28,20 @@ export function Footer() {
             三三三
           </span>
           <p className="mt-6 font-body text-[10px] font-medium uppercase tracking-label text-fg-subtle">
-            adidas × Fear of God
+            {t.nav.brand}
           </p>
           <p className="mt-4 max-w-lg font-display text-3xl tracking-display text-balance sm:text-4xl">
-            Three stripes. Three threes. One quiet fire —{" "}
-            <span className="font-cjk" lang="zh">
-              祝融
-            </span>
-            .
+            {taglineParts.length > 1 ? (
+              <>
+                {taglineParts[0]}
+                <span className="font-cjk" lang="zh">
+                  祝融
+                </span>
+                {taglineParts[1]}
+              </>
+            ) : (
+              t.footer.tagline
+            )}
           </p>
           <Ornament className="mt-8 max-w-[10rem]" />
         </div>
@@ -25,22 +49,15 @@ export function Footer() {
         <div className="mt-16 grid gap-10 border-t border-border pt-12 sm:grid-cols-3 lg:grid-cols-4">
           <div>
             <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">
-              Navigate
+              {t.footer.navigate}
             </p>
             <ul className="mt-4 space-y-2.5">
-              {[
-                ["#story", "Story"],
-                ["#zhurong", "Three · 祝融"],
-                ["#editions", "Editions"],
-                ["#limited", "三三三"],
-                ["#runway", "Runway"],
-                ["#details", "Details"],
-              ].map(([href, label]) => (
+              {navLinks.map(([href, label]) => (
                 <li key={href}>
                   <a
                     href={href}
                     className={`text-sm text-fg-muted transition-colors hover:text-fg ${
-                      label === "三三三" ? "font-cjk tracking-wide-cjk" : "font-body"
+                      isCjkOnly(label) ? "font-cjk tracking-wide-cjk" : "font-body"
                     }`}
                   >
                     {label}
@@ -51,44 +68,41 @@ export function Footer() {
           </div>
           <div>
             <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">
-              Editions
+              {t.footer.editions}
             </p>
             <ul className="mt-4 space-y-2.5 font-body text-sm text-fg-muted">
-              <li>Leather · 三三三</li>
-              <li>Knit · Open</li>
-              <li>Randoseru set</li>
+              <li>{t.footer.edLeather}</li>
+              <li>{t.footer.edKnit}</li>
+              <li>{t.footer.edBag}</li>
             </ul>
           </div>
           <div>
-            <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">Codex</p>
+            <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">
+              {t.footer.codex}
+            </p>
             <ul className="mt-4 space-y-2.5 font-body text-sm text-fg-muted">
               <li className="flex items-center gap-2">
-                <ThreeStripes size="sm" /> Three Stripes
+                <ThreeStripes size="sm" /> {t.footer.threeStripes}
               </li>
-              <li>
-                <span className="font-cjk">三</span> · Three
-              </li>
-              <li>
-                <span className="font-cjk">祝融</span> · Zhu Rong
-              </li>
+              <li>{t.footer.three}</li>
+              <li>{t.footer.zhurong}</li>
             </ul>
           </div>
           <div className="sm:col-span-3 lg:col-span-1">
-            <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">Note</p>
+            <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">
+              {t.footer.note}
+            </p>
             <p className="mt-4 font-body text-sm leading-relaxed text-fg-muted text-pretty">
-              Conceptual editorial exploration inspired by luxury sport collaborations. Not an
-              official product page.
+              {t.footer.noteBody}
             </p>
           </div>
         </div>
 
         <div className="mt-14 flex flex-col gap-3 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-body text-[10px] uppercase tracking-label text-fg-subtle">
-            Special project · Editorial concept
+            {t.footer.bottom}
           </p>
-          <p className="font-body text-[10px] text-fg-subtle">
-            Three Stripes · #001—#333 · <span className="font-cjk tracking-wide-cjk">三三三</span>
-          </p>
+          <p className="font-body text-[10px] text-fg-subtle">{t.footer.serial}</p>
         </div>
       </div>
     </footer>

@@ -1,23 +1,26 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { ThreeStripes } from "./Ornament";
-
-const links = [
-  { href: "#story", label: "Story" },
-  { href: "#zhurong", label: "Three · 祝融" },
-  { href: "#editions", label: "Editions" },
-  { href: "#limited", label: "三三三" },
-  { href: "#runway", label: "Runway" },
-  { href: "#details", label: "Details" },
-];
+import { useI18n } from "@/i18n/I18nProvider";
+import { LOCALE_META, type Locale } from "@/i18n/types";
 
 function isCjk(label: string) {
   return /[\u4e00-\u9fff]/.test(label) && !label.includes("·");
 }
 
 export function SiteNav() {
+  const { t, locale, setLocale, locales } = useI18n();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const links = [
+    { href: "#story", label: t.nav.story },
+    { href: "#zhurong", label: t.nav.zhurong },
+    { href: "#editions", label: t.nav.editions },
+    { href: "#limited", label: t.nav.limited },
+    { href: "#runway", label: t.nav.runway },
+    { href: "#details", label: t.nav.details },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -34,6 +37,28 @@ export function SiteNav() {
   }, [open]);
 
   const light = scrolled || open;
+
+  const langSelect = (
+    <label className="relative inline-flex items-center">
+      <span className="sr-only">{t.nav.lang}</span>
+      <select
+        value={locale}
+        onChange={(e) => setLocale(e.target.value as Locale)}
+        className={`appearance-none border bg-transparent py-2 pl-2.5 pr-7 font-body text-[10px] font-medium uppercase tracking-label outline-none ${
+          light
+            ? "border-border text-fg-muted hover:text-fg"
+            : "border-fg-inverse/25 text-fg-inverse/70 hover:text-fg-inverse"
+        }`}
+        aria-label={t.nav.lang}
+      >
+        {locales.map((code) => (
+          <option key={code} value={code} className="bg-bg text-fg">
+            {LOCALE_META[code].native}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
 
   return (
     <header
@@ -53,14 +78,14 @@ export function SiteNav() {
                 light ? "text-fg-subtle" : "text-fg-inverse/55"
               }`}
             >
-              Special Project
+              {t.nav.special}
             </span>
             <span
               className={`mt-1 font-display text-base tracking-display transition-colors sm:text-lg ${
                 light ? "text-fg" : "text-fg-inverse"
               }`}
             >
-              adidas × Fear of God
+              {t.nav.brand}
             </span>
           </span>
         </a>
@@ -84,6 +109,7 @@ export function SiteNav() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <div className="hidden sm:block">{langSelect}</div>
           <a
             href="#limited"
             className={`hidden items-center gap-2.5 px-4 py-2.5 font-body text-[10px] font-medium uppercase tracking-label transition-opacity hover:opacity-75 sm:inline-flex ${
@@ -91,14 +117,14 @@ export function SiteNav() {
             }`}
           >
             <ThreeStripes tone={light ? "dark" : "light"} size="sm" />
-            Explore Set
+            {t.nav.explore}
           </a>
           <button
             type="button"
             className={`inline-flex h-11 w-11 items-center justify-center lg:hidden ${
               light ? "border border-border text-fg" : "border border-fg-inverse/25 text-fg-inverse"
             }`}
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
@@ -128,6 +154,7 @@ export function SiteNav() {
                 {link.label}
               </a>
             ))}
+            <div className="py-4 sm:hidden">{langSelect}</div>
           </nav>
         </div>
       )}

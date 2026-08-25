@@ -1,48 +1,50 @@
 import { Ornament, ThreeStripes } from "./Ornament";
 import { media } from "@/lib/assets";
-
-const editions = [
-  {
-    id: "leather",
-    label: "Edition 01 · 祝融",
-    name: "Kami Kage Leather",
-    tag: "三三三 · Limited",
-    material: "Full-grain leather",
-    description:
-      "Spazzolato-smooth optic white leather with a wrap strap, embossed three-stripe language, and a translucent air unit. Issued only as the numbered Zhu Rong set of 333 with matching randoseru.",
-    image: media("leather.jpg"),
-    specs: ["Full-grain upper", "Three Stripes emboss", "Visible air heel", "Matched hide"],
-  },
-  {
-    id: "knit",
-    label: "Edition 02",
-    name: "Kami Kage Knit",
-    tag: "Mainline",
-    material: "Engineered knit",
-    description:
-      "A lighter expression in monochrome knit — engineered mesh panels, trefoil language, and the same high-cut volume for daily wear. Three-stripe DNA, softened.",
-    image: media("knit.jpg"),
-    specs: ["Engineered knit", "Breathable panels", "Air cushion", "Sock-like fit"],
-  },
-];
+import { useI18n } from "@/i18n/I18nProvider";
 
 export function Editions() {
+  const { t } = useI18n();
+
+  const editions = [
+    {
+      id: "leather",
+      label: t.editions.leatherLabel,
+      name: t.editions.leatherName,
+      tag: t.editions.leatherTag,
+      material: t.editions.leatherMaterial,
+      description: t.editions.leatherDesc,
+      image: media("leather.jpg"),
+      specs: t.editions.leatherSpecs,
+      cta: t.editions.leatherCta,
+    },
+    {
+      id: "knit",
+      label: t.editions.knitLabel,
+      name: t.editions.knitName,
+      tag: t.editions.knitTag,
+      material: t.editions.knitMaterial,
+      description: t.editions.knitDesc,
+      image: media("knit.jpg"),
+      specs: t.editions.knitSpecs,
+      cta: t.editions.knitCta,
+    },
+  ];
+
   return (
     <section id="editions" className="border-b border-border bg-bg">
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-32 lg:px-10">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-lg">
             <p className="font-body text-[10px] font-medium uppercase tracking-label text-fg-subtle">
-              02 — Editions
+              {t.editions.kicker}
             </p>
             <h2 className="mt-4 font-display text-4xl tracking-display sm:text-5xl">
-              Two whites, one form
+              {t.editions.title}
             </h2>
             <Ornament className="mt-6 max-w-[7rem]" />
           </div>
           <p className="max-w-xs font-body text-sm leading-relaxed text-fg-muted">
-            Leather for the archive. Knit for the street. Both carry the Three Stripes inheritance —
-            high collar, cross wrap, floating midsole.
+            {t.editions.intro}
           </p>
         </div>
 
@@ -88,10 +90,10 @@ export function Editions() {
                   {item.id === "leather" ? (
                     <>
                       <ThreeStripes size="sm" />
-                      Discover the set
+                      {item.cta}
                     </>
                   ) : (
-                    "Technical details"
+                    item.cta
                   )}
                 </a>
               </div>
