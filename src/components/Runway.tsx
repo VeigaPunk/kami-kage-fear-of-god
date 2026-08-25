@@ -103,7 +103,7 @@ export function Runway() {
               ref={videoRef}
               className="h-full w-full object-cover"
               playsInline
-              muted
+              muted={!soundOn}
               preload="metadata"
               poster={media("zhudio54-poster.jpg")}
               onPlay={() => setPlaying(true)}
