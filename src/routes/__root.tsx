@@ -3,7 +3,7 @@ import appCss from "../styles.css?url";
 import { asset } from "@/lib/assets";
 
 const SITE_URL = "https://veigapunk.github.io/kami-kage-fear-of-god/";
-# Unique path so X/Twitter re-crawls instead of serving the cached backpack card.
+// Unique path so X/Twitter re-crawls instead of serving the cached backpack card.
 const OG_IMAGE = `${SITE_URL}media/og-leather-sneaker.jpg`;
 const TITLE = "adidas Kami Kage × Fear of God — 祝融 · 三三三";
 const DESCRIPTION =
