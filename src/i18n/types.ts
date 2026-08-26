@@ -151,5 +151,6 @@ export type Messages = {
     noteBody: string;
     bottom: string;
     serial: string;
+    lead: string;
   };
 };
