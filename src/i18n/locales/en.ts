@@ -182,6 +182,7 @@ const en: Messages = {
       "Conceptual editorial exploration inspired by luxury sport collaborations. Not an official product page.",
     bottom: "Special project · Editorial concept",
     serial: "Three Stripes · #001—#333 · 三三三",
+    lead: "Squad lead designer · born March 3 · Tuesday · 3:30 pm",
   },
 };
 

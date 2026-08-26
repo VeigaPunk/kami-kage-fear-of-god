@@ -173,6 +173,7 @@ const zhCN: Messages = {
     noteBody: "受奢华运动合作启发的概念编辑探索。非官方产品页面。",
     bottom: "特别企划 · 编辑概念",
     serial: "Three Stripes · #001—#333 · 三三三",
+    lead: "小队首席设计师 · 生于三月三日 · 星期二 · 15:30",
   },
 };
 

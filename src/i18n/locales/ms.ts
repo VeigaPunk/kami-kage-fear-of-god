@@ -187,6 +187,7 @@ const ms: Messages = {
       "Eksplorasi editorial konsep yang diilhamkan oleh kolaborasi sukan mewah. Bukan halaman produk rasmi.",
     bottom: "Projek khas · Konsep editorial",
     serial: "Three Stripes · #001—#333 · 三三三",
+    lead: "Pereka utama skuad · lahir 3 Mac · Selasa · 3:30 ptg",
   },
 };
 

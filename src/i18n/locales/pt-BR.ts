@@ -192,6 +192,7 @@ const ptBR: Messages = {
       "Exploração editorial conceitual inspirada em colaborações de esporte de luxo. Não é uma página oficial de produto.",
     bottom: "Projeto especial · Conceito editorial",
     serial: "Three Stripes · #001—#333 · 三三三",
+    lead: "Lead designer do squad · nascido em 3 de março · terça · 15:30",
   },
 };
 

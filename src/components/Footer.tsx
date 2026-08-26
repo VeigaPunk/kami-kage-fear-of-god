@@ -104,6 +104,9 @@ export function Footer() {
           </p>
           <p className="font-body text-[10px] text-fg-subtle">{t.footer.serial}</p>
         </div>
+        <p className="mt-5 font-body text-[9px] tracking-wide text-fg-subtle/60 text-pretty sm:text-right">
+          {t.footer.lead}
+        </p>
       </div>
     </footer>
   );
